@@ -1,0 +1,47 @@
+mixed-port: 7890
+allow-lan: true
+bind-address: '*'
+mode: rule
+log-level: info
+external-controller: '127.0.0.1:9090'
+dns:
+    enable: true
+    ipv6: false
+    default-nameserver: [223.5.5.5, 119.29.29.29]
+    enhanced-mode: fake-ip
+    fake-ip-range: 198.18.0.1/16
+    use-hosts: true
+    nameserver: ['https://doh.pub/dns-query', 'https://dns.alidns.com/dns-query']
+    fallback: ['https://doh-pure.onedns.net/dns-query', 'https://ada.openbld.net/dns-query', 'https://223.5.5.5/dns-query', 'https://223.6.6.6/dns-query']
+    fallback-filter: { geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32] }
+proxies:
+    - { name: '剩余流量：386.2 GB', type: vmess, server: 127.0.0.1, port: 80, uuid: ff2d8f17-7a3a-4142-94ae-f6c868ece5f7, alterId: 0, cipher: auto, udp: true, network: ws }
+    - { name: '距离下次重置剩余：13 天', type: vmess, server: 127.0.0.1, port: 80, uuid: ff2d8f17-7a3a-4142-94ae-f6c868ece5f7, alterId: 0, cipher: auto, udp: true, network: ws }
+    - { name: 套餐到期：2026-03-23, type: vmess, server: 127.0.0.1, port: 80, uuid: ff2d8f17-7a3a-4142-94ae-f6c868ece5f7, alterId: 0, cipher: auto, udp: true, network: ws }
+    - { name: '无网更新订阅|最新官网:4399.bid', type: vmess, server: 127.0.0.1, port: 80, uuid: ff2d8f17-7a3a-4142-94ae-f6c868ece5f7, alterId: 0, cipher: auto, udp: true, network: ws }
+    - { name: 请打开代理软件的ipv6功能以使用部分线路, type: vmess, server: 127.0.0.1, port: 80, uuid: ff2d8f17-7a3a-4142-94ae-f6c868ece5f7, alterId: 0, cipher: auto, udp: true, network: ws }
+    - { name: 'tg群:https://t.me/muguacloud2', type: vmess, server: '1', port: 8080, uuid: ff2d8f17-7a3a-4142-94ae-f6c868ece5f7, alterId: 0, cipher: auto, udp: true, network: ws }
+    - { name: CN-上海游戏节点, type: vmess, server: 47.101.221.55, port: 80, uuid: ff2d8f17-7a3a-4142-94ae-f6c868ece5f7, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /, headers: { Host: upay.10010.com } } }
+    - { name: CN-深圳游戏节点, type: vmess, server: 120.24.60.59, port: 80, uuid: ff2d8f17-7a3a-4142-94ae-f6c868ece5f7, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /, headers: { Host: upay.10010.com } } }
+    - { name: CN-浙江BGP, type: vmess, server: 114.66.41.97, port: 80, uuid: ff2d8f17-7a3a-4142-94ae-f6c868ece5f7, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /, headers: { Host: upay.10010.com } } }
+    - { name: CN-内蒙古电信, type: vmess, server: sd.xn--wlqw1swrj04ju56d.com, port: 80, uuid: ff2d8f17-7a3a-4142-94ae-f6c868ece5f7, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /, headers: { Host: upay.10010.com } } }
+    - { name: CN-云南电信, type: vmess, server: 103.20.160.92, port: 80, uuid: ff2d8f17-7a3a-4142-94ae-f6c868ece5f7, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /, headers: { Host: upay.10010.com } } }
+    - { name: CN-山东电信, type: vmess, server: 120.27.10.162, port: 80, uuid: ff2d8f17-7a3a-4142-94ae-f6c868ece5f7, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /, headers: { Host: upay.10010.com } } }
+    - { name: CN-北京BGP, type: vmess, server: 101.200.218.199, port: 80, uuid: ff2d8f17-7a3a-4142-94ae-f6c868ece5f7, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /, headers: { Host: upay.10010.com } } }
+    - { name: CN-河南移动, type: vmess, server: hn.xn--wlqw1swrj04ju56d.com, port: 80, uuid: ff2d8f17-7a3a-4142-94ae-f6c868ece5f7, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /, headers: { Host: upay.10010.com } } }
+    - { name: CN-成都电信, type: vmess, server: 222.211.93.152, port: 80, uuid: ff2d8f17-7a3a-4142-94ae-f6c868ece5f7, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /, headers: { Host: upay.10010.com } } }
+    - { name: CN-十堰电信, type: vmess, server: 160.202.238.91, port: 80, uuid: ff2d8f17-7a3a-4142-94ae-f6c868ece5f7, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /, headers: { Host: upay.10010.com } } }
+    - { name: CN-浙江BGP(443端口), type: vmess, server: nb.xn--wlqw1swrj04ju56d.com, port: 443, uuid: ff2d8f17-7a3a-4142-94ae-f6c868ece5f7, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /, headers: { Host: upay.10010.com } } }
+    - { name: CN云南电信(443端口), type: vmess, server: 103.20.160.92, port: 443, uuid: ff2d8f17-7a3a-4142-94ae-f6c868ece5f7, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /, headers: { Host: upay.10010.com } } }
+    - { name: CN-成都电信(443端口), type: vmess, server: 222.211.93.152, port: 443, uuid: ff2d8f17-7a3a-4142-94ae-f6c868ece5f7, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /, headers: { Host: upay.10010.com } } }
+    - { name: CN-北京BGP(443端口), type: vmess, server: 101.200.218.199, port: 443, uuid: ff2d8f17-7a3a-4142-94ae-f6c868ece5f7, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /, headers: { Host: upay.10010.com } } }
+    - { name: CN-十堰电信(443端口), type: vmess, server: 160.202.238.91, port: 443, uuid: ff2d8f17-7a3a-4142-94ae-f6c868ece5f7, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /, headers: { Host: upay.10010.com } } }
+    - { name: CN-内蒙古电信(443端口), type: vmess, server: sd.xn--wlqw1swrj04ju56d.com, port: 443, uuid: ff2d8f17-7a3a-4142-94ae-f6c868ece5f7, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /, headers: { Host: upay.10010.com } } }
+    - { name: CN-山东电信(443端口), type: vmess, server: 120.27.10.162, port: 443, uuid: ff2d8f17-7a3a-4142-94ae-f6c868ece5f7, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /, headers: { Host: upay.10010.com } } }
+    - { name: CN-河南移动(443端口), type: vmess, server: hn.xn--wlqw1swrj04ju56d.com, port: 443, uuid: ff2d8f17-7a3a-4142-94ae-f6c868ece5f7, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /, headers: { Host: upay.10010.com } } }
+    - { name: CN-河南1G, type: vmess, server: hn.xn--wlqw1swrj04ju56d.com, port: 8888, uuid: ff2d8f17-7a3a-4142-94ae-f6c868ece5f7, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /, headers: { Host: upay.10010.com } } }
+    - { name: 'TW 1G 家宽/Netflix TCP', type: vmess, server: tw1g.jieqa.xyz, port: 80, uuid: ff2d8f17-7a3a-4142-94ae-f6c868ece5f7, alterId: 0, cipher: auto, udp: true, network: http, http-opts: { headers: { Host: [tms.dingtalk.com] }, path: [/] } }
+    - { name: 'HK 5G TCP', type: vmess, server: hk5g.jieqa.xyz, port: 80, uuid: ff2d8f17-7a3a-4142-94ae-f6c868ece5f7, alterId: 0, cipher: auto, udp: true, network: http, http-opts: { headers: { Host: [tms.dingtalk.com] }, path: [/] } }
+    - { name: 'HK 5G(443端口) TCP', type: vmess, server: hk5g.jieqa.xyz, port: 443, uuid: ff2d8f17-7a3a-4142-94ae-f6c868ece5f7, alterId: 0, cipher: auto, udp: true, network: http, http-opts: { headers: { Host: [tms.dingtalk.com] }, path: [/] } }
+    - { name: 'SG 5G TCP', type: vmess, server: sg5g.jieqa.xyz, port: 80, uuid: ff2d8f17-7a3a-4142-94ae-f6c868ece5f7, alterId: 0, cipher: auto, udp: true, network: http, http-opts: { headers: { Host: [tms.dingtalk.com] }, path: [/] } }
+    - { name: 'JP 5G TCP', type: vmess,
